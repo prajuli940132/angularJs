@@ -1,0 +1,31 @@
+<html ng-app="myModule">
+    <head>
+        <script src="angular.js"></script>
+        <script src="script.js"></script>
+        <link rel="styles.css">
+    </head>
+    <body>
+        <div ng-controller="myController">
+            <table>
+                <thead>
+                    <tr>
+                        
+                            <th>Names</th>
+                            <th>likes</th>
+                            <th>dislikes</th>
+                            <th>likes/dislikes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="tech1 in tech">
+                        <th>{{tech1.name}}</th>
+                        <th>{{tech1.likes}}</th>
+                        <th>{{tech1.dislikes}}</th>
+                        <th><input ng-click="incrementLikes(tech1)" type="button" value="like"/>
+                            <input ng-click="incrementDislikes(tech1)" type="button" value="dislike"/></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
